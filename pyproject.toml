@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aarm-v2"
+version = "0.1.0"
+description = "AARM-v2.0 Dual-Manifold Mesh Legal Reasoning Engine"
+authors = [
+  { name = "Brad" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "rdflib>=7.0.0",
+  "pyshacl>=0.23.0",
+  "jsonschema>=4.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
